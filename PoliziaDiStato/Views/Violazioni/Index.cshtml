@@ -1,0 +1,37 @@
+﻿@model IEnumerable<PoliziaDiStato.Models.Tipo_Violazione>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2 class="mb-5">Lista Violazioni</h2>
+<div class="container">
+
+    <button class="btn btn-outline-primary mb-3" onclick="location.href='@Url.Action("Create")'">Aggiungi</button>
+
+
+    <table class="table table-striped">
+
+        <tr>
+
+            <!-- scrivimi i campi che vengono dal model-->
+
+            <th class="mb-0 fw-bold">Id Violazione</th>
+            <th class="mb-0 fw-bold">Descrizione</th>
+
+
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+
+                <td class="mb-0">@item.IdViolazione</td>
+                <td class="mb-0">@item.Descrizione</td>
+            </tr>
+        }
+
+    </table>
+
+</div>
+

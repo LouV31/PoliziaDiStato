@@ -1,0 +1,31 @@
+﻿@model IEnumerable<PoliziaDiStato.Models.SharedAnagraficaVerbale>
+
+@{
+    ViewBag.Title = "PuntiMaggDieci";
+}
+
+<h2>Punti Decurtati Maggiore di Dieci</h2>
+
+<div class="container">
+    <table class="table table-striped">
+        <tr>
+            <th class="mb-0 fw-bold">Nome</th>
+            <th class="mb-0 fw-bold">Cognome</th>
+            <th class="mb-0 fw-bold">Importo</th>
+            <th class="mb-0 fw-bold">Data Violazione</th>
+            <th class="mb-0 fw-bold">Punti Decurtati</th>
+            
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td class="mb-0">@item.Anagrafica.Nome</td>
+                <td class="mb-0">@item.Anagrafica.Cognome</td>
+                <td class="mb-0">@item.Verbale.Importo</td>
+                <td class="mb-0">@item.Verbale.DataViolazione</td>
+                <td class="mb-0">@item.Verbale.PuntiDecurtati</td>
+            </tr>
+        }
+    </table> 
+    </div>
+

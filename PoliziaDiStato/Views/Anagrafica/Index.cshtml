@@ -1,0 +1,47 @@
+﻿@model IEnumerable<PoliziaDiStato.Models.Anagrafica>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2 class="mb-5">Lista Anagrafica</h2>
+<div class="container">
+
+    <button class="btn btn-outline-primary mb-3" onclick="location.href='@Url.Action("Create")'">Aggiungi</button>
+
+
+    <table class="table table-striped">
+
+        <tr>
+
+            <!-- scrivimi i campi che vengono dal model-->
+
+            <th class="mb-0 fw-bold">Id Anagrafica</th>
+            <th class="mb-0 fw-bold">Nome</th>
+            <th class="mb-0 fw-bold">Cognome</th>
+            <th class="mb-0 fw-bold">Codice Fiscale</th>
+            <th class="mb-0 fw-bold">Città</th>
+            <th class="mb-0 fw-bold">CAP</th>
+            <th class="mb-0 fw-bold">Indirizzo</th>
+
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+
+                <td class="mb-0">@item.IdAnagrafica</td>
+                <td class="mb-0">@item.Nome</td>
+                <td class="mb-0">@item.Cognome</td>
+                <td class="mb-0">@item.CodiceFiscale</td>
+                <td class="mb-0">@item.Citta</td>
+                <td class="mb-0">@item.CAP</td>
+                <td class="mb-0">@item.Indirizzo</td>
+
+            </tr>
+        }
+
+    </table>
+
+</div>
+

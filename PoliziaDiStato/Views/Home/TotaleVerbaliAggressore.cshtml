@@ -1,0 +1,46 @@
+﻿@model IEnumerable<PoliziaDiStato.Models.Anagrafica>
+
+@{
+    ViewBag.Title = "Totale Verbali Aggressore";
+}
+
+<h2>Totale Verbali Aggressore</h2>
+
+
+<div class="container">
+
+  
+
+
+    <table class="table table-striped">
+
+        <tr>
+
+            
+
+            <th class="mb-0 fw-bold">Cognome</th>
+            <th class="mb-0 fw-bold">Nome</th>
+            <th class="mb-0 fw-bold">N. Verbali</th>
+            <th class="mb-0 fw-bold">Tot. Importi</th>
+            <th class="mb-0 fw-bold">Tot. Decurtato</th>
+            
+
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+
+                <td class="mb-0">@item.Cognome</td>
+                <td class="mb-0">@item.Nome</td>
+                <td class="mb-0">@item.TotaleNumeroVerbali</td>
+                <td class="mb-0">@item.TotaleImporti</td>
+                <td class="mb-0">@item.TotalePuntiDecurtati</td>
+                
+
+            </tr>
+        }
+
+    </table>
+
+</div>

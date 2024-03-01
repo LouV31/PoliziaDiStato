@@ -1,0 +1,54 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<main>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    
+                    <div class="card-body">
+                        <h5 class="card-title">Prima Query</h5>
+                        <p class="card-text">Verbali trascritti raggruppati per trasgressore.</p>
+                        <button class="btn btn-outline-success" onclick="location.href='@Url.Action("TotaleVerbaliAggressore")'">Vai</button> 
+                    </div>
+                </div>
+
+            </div>
+            <div class="col">
+                <div class="card">
+                    
+                    <div class="card-body">
+                        <h5 class="card-title">Seconda Query</h5>
+                        <p class="card-text">Totale punti decurtati raggruppati per trasgressore.</p>
+                        <button class="btn btn-outline-success" onclick="location.href='@Url.Action("TotalePuntiDecurtatiAggressore")'">Vai</button> 
+                    </div>
+                </div>
+
+            </div>
+            <div class="col">
+                <div class="card">
+                    
+                    <div class="card-body">
+                        <h5 class="card-title">Terza Query</h5>
+                        <p class="card-text">Anagrafe persone con più di 10 punti decurtati.</p>
+                        <button class="btn btn-outline-success" onclick="location.href='@Url.Action("VerbaliSupQuattrocento")'">Vai</button> 
+                    </div>
+                </div>
+
+            </div>
+            <div class="col">
+                <div class="card">
+                    
+                    <div class="card-body">
+                        <h5 class="card-title">Quarta Query</h5>
+                        <p class="card-text">Persona con più di 400 euro di importo.</p>
+                        <button class="btn btn-outline-success" onclick="location.href='@Url.Action("PuntiMaggDieci")'">Vai</button> 
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</main>
